@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<DOCUMENT Type="Advanced Installer" CreateVersion="16.6.1" version="18.1.1" Modules="express" RootPath="." Language="en" Id="{F94250A5-86CD-4D74-BDB8-560C4CA1354D}">
+<DOCUMENT Type="Advanced Installer" CreateVersion="16.6.1" version="16.6.1" Modules="express" RootPath="." Language="en" Id="{F94250A5-86CD-4D74-BDB8-560C4CA1354D}">
+  <COMPONENT cid="caphyon.advinst.msicomp.ProjectOptionsComponent">
+    <ROW Name="HiddenItems" Value="MsiThemeComponent;BackgroundImagesComponent;UpdaterComponent;SerValComponent;MsiInstExSeqComponent;DictionaryComponent;MsiAppSearchComponent;MsiOdbcDataSrcComponent;CPLAppletComponent;ActSyncAppComponent;PreReqComponent;WebApplicationsComponent;MsiJavaComponent;MsiDriverPackagesComponent;UserAccountsComponent;ScheduledTasksComponent;SqlConnectionComponent;AutorunComponent;FirewallExceptionComponent;GameUxComponent;MsiDirectEditorComponent;SharePointSlnComponent;SilverlightSlnComponent;MultipleInstancesComponent;SccmComponent;ActSyncAppComponent;AppXAppDetailsComponent;FixupComponent;AppXCapabilitiesComponent;AppXDependenciesComponent;AppXProductDetailsComponent;AppXVisualAssetsComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent"/>
+  </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
     <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
-    <ROW Property="AI_CURRENT_YEAR" Value="2021" ValueLocId="-"/>
     <ROW Property="AI_RUN_AS_ADMIN" Value="0"/>
     <ROW Property="ALLUSERS" Value="1"/>
     <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
@@ -16,10 +18,10 @@
     <ROW Property="MSIFASTINSTALL" MultiBuildValue="MsiBuild:1"/>
     <ROW Property="Manufacturer" Value="Duong Dieu Phap"/>
     <ROW Property="MsiLogging" MultiBuildValue="MsiBuild:vp"/>
-    <ROW Property="ProductCode" Value="1033:{0696BE36-3031-4E2B-99C3-FC341CB7CE88} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{9F19EAA8-6D29-4CAD-AA34-3C3D5823FE6C} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="ImageGlass"/>
-    <ROW Property="ProductVersion" Value="8.1.4.18" Type="32" TargetFile="ImageGlass.exe"/>
+    <ROW Property="ProductVersion" Value="7.6.4.30" Type="32" TargetFile="ImageGlass.exe"/>
     <ROW Property="RUNAPPLICATION" Value="1" Type="4"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{877DB994-AB03-4025-B99D-41CE565E810B}"/>
@@ -38,20 +40,16 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
     <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
-    <ROW Directory="CommonAppDataFolder" Directory_Parent="TARGETDIR" DefaultDir="COMMON~1|CommonAppDataFolder" IsPseudoRoot="1"/>
+    <ROW Directory="DefaultTheme_Dir" Directory_Parent="APPDIR" DefaultDir="DEFAUL~1|DefaultTheme"/>
     <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="DESKTO~1|DesktopFolder" IsPseudoRoot="1"/>
     <ROW Directory="ExtIcons_Dir" Directory_Parent="APPDIR" DefaultDir="EXT-IC~1|Ext-Icons"/>
-    <ROW Directory="Kobe_Dir" Directory_Parent="Themes_Dir" DefaultDir="Kobe"/>
     <ROW Directory="Languages_Dir" Directory_Parent="APPDIR" DefaultDir="LANGUA~1|Languages"/>
     <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
     <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
-    <ROW Directory="Themes_Dir" Directory_Parent="APPDIR" DefaultDir="Themes"/>
-    <ROW Directory="regid.201006.org.imageglass_Dir" Directory_Parent="CommonAppDataFolder" DefaultDir="REGID2~1.IMA|regid.2010-06.org.imageglass"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
     <ROW Component="APPDIR" ComponentId="{9AA73F17-00E0-4CFF-BB31-59859F667103}" Directory_="APPDIR" Attributes="0"/>
-    <ROW Component="ActualSize.svg" ComponentId="{BCF7F4A0-2DBA-402B-94E6-738269A88866}" Directory_="Kobe_Dir" Attributes="0" KeyPath="ActualSize.svg" Type="0"/>
-    <ROW Component="ChineseSimplified.iglang" ComponentId="{7F90E80E-2B89-4933-82CE-219982CA6D16}" Directory_="Languages_Dir" Attributes="0" KeyPath="ChineseSimplified.iglang" Type="0"/>
+    <ROW Component="DefaultTheme" ComponentId="{4947F36A-0FFD-46E4-B692-95778C9360E5}" Directory_="DefaultTheme_Dir" Attributes="0" KeyPath="LightGray.igtheme" Type="0"/>
     <ROW Component="DotNetZip.dll" ComponentId="{03687EFB-D01B-4994-BD04-B60CDD6B1485}" Directory_="APPDIR" Attributes="0" KeyPath="DotNetZip.dll"/>
     <ROW Component="ExplorerSortOrder32.dll" ComponentId="{AF444850-AFFC-4454-A3A0-17D422824C89}" Directory_="APPDIR" Attributes="0" KeyPath="ExplorerSortOrder32.dll"/>
     <ROW Component="ExtIcons" ComponentId="{AD9FEE50-9291-406F-8FD9-37AF1B0E6345}" Directory_="ExtIcons_Dir" Attributes="0" KeyPath="FR.ico" Type="0"/>
@@ -65,10 +63,8 @@
     <ROW Component="ImageGlass.Settings.dll" ComponentId="{82308159-787C-4CF3-9D27-16B58A2FEE88}" Directory_="APPDIR" Attributes="0" KeyPath="ImageGlass.Settings.dll"/>
     <ROW Component="ImageGlass.UI.dll" ComponentId="{CB59FAC1-1DC8-4DED-9FD1-D03526502C2E}" Directory_="APPDIR" Attributes="0" KeyPath="ImageGlass.UI.dll"/>
     <ROW Component="ImageGlass.exe" ComponentId="{72CA36B0-774B-46F6-9203-43DDE7E4542B}" Directory_="APPDIR" Attributes="256" KeyPath="ImageGlass.exe"/>
-    <ROW Component="LightGray.igtheme" ComponentId="{CB19C0B4-90C9-4040-87D4-83911B706AE7}" Directory_="Themes_Dir" Attributes="0" KeyPath="LightGray.igtheme" Type="0"/>
-    <ROW Component="Magick.NET.Core.dll" ComponentId="{624EF941-AC54-4F6D-9DD2-10122191C5C4}" Directory_="APPDIR" Attributes="0" KeyPath="Magick.NET.Core.dll"/>
-    <ROW Component="Magick.NET.SystemDrawing.dll" ComponentId="{20D77C7C-EC9C-4A81-BB6A-418957A76FD2}" Directory_="APPDIR" Attributes="0" KeyPath="Magick.NET.SystemDrawing.dll"/>
-    <ROW Component="Magick.NETQ8AnyCPU.dll" ComponentId="{754ABD61-43CD-4CA8-B853-ACE1C905CE50}" Directory_="APPDIR" Attributes="0" KeyPath="Magick.NETQ8AnyCPU.dll"/>
+    <ROW Component="Languages" ComponentId="{31E06A4D-E824-4DC1-B7F2-6004222D531A}" Directory_="Languages_Dir" Attributes="0" KeyPath="ChineseTraditional.iglang" Type="0"/>
+    <ROW Component="Magick.NETQ16AnyCPU.dll" ComponentId="{4797EAB0-C300-46A9-A471-1CB0081E503F}" Directory_="APPDIR" Attributes="0" KeyPath="Magick.NETQ16AnyCPU.dll"/>
     <ROW Component="Registry" ComponentId="{8FB9A6E2-EB42-405D-B57B-7E83B423B08E}" Directory_="APPDIR" Attributes="4" KeyPath="ProductName"/>
     <ROW Component="SHORTCUTDIR" ComponentId="{A0ECB089-2670-479A-B45D-4C76901F0F14}" Directory_="SHORTCUTDIR" Attributes="0"/>
     <ROW Component="System.Runtime.WindowsRuntime.dll" ComponentId="{E4494A30-3403-46E1-8968-A2E93F03107E}" Directory_="APPDIR" Attributes="0" Condition="(VersionNT = 1000 AND MsiNTProductType = 1)" KeyPath="System.Runtime.WindowsRuntime.dll"/>
@@ -77,7 +73,6 @@
     <ROW Component="igcmd.exe" ComponentId="{C671BBC9-41E1-4BB0-85F2-B80D355AA138}" Directory_="APPDIR" Attributes="0" KeyPath="igcmd.exe"/>
     <ROW Component="igcmdWin10.exe" ComponentId="{A068C8A8-3CBD-455F-A541-40D81D5002B8}" Directory_="APPDIR" Attributes="0" Condition="(VersionNT = 1000 AND MsiNTProductType = 1)" KeyPath="igcmdWin10.exe"/>
     <ROW Component="igtasks.exe" ComponentId="{2DAC1C7A-F0A6-49AF-A369-E30435C52160}" Directory_="APPDIR" Attributes="0" KeyPath="igtasks.exe"/>
-    <ROW Component="regid.201006.org.imageglass" ComponentId="{0F9C09A6-34C2-4DF5-83C1-1C8DB26AB3B8}" Directory_="regid.201006.org.imageglass_Dir" Attributes="0"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
     <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
@@ -86,6 +81,17 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
     <ROW File="default.jpg" Component_="default.jpg" FileName="default.jpg" Attributes="0" SourcePath="..\..\Assets\default.jpg" SelfReg="false"/>
     <ROW File="ImageGlass.exe" Component_="ImageGlass.exe" FileName="IMAGEG~1.EXE|ImageGlass.exe" Attributes="0" SourcePath="..\..\..\Source\ImageGlass\bin\x86\Release\ImageGlass.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="ChineseTraditional.iglang" Component_="Languages" FileName="CHINES~1.IGL|Chinese Traditional.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Chinese Traditional.iglang" SelfReg="false"/>
+    <ROW File="Greek.iglang" Component_="Languages" FileName="GREEK~1.IGL|Greek.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Greek.iglang" SelfReg="false"/>
+    <ROW File="Hungarian.iglang" Component_="Languages" FileName="HUNGAR~1.IGL|Hungarian.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Hungarian.iglang" SelfReg="false"/>
+    <ROW File="Polish.iglang" Component_="Languages" FileName="POLISH~1.IGL|Polish.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Polish.iglang" SelfReg="false"/>
+    <ROW File="PortugueseBrazilian.iglang" Component_="Languages" FileName="PORTUG~1.IGL|Portuguese, Brazilian.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Portuguese, Brazilian.iglang" SelfReg="false"/>
+    <ROW File="Portuguese.iglang" Component_="Languages" FileName="PORTUG~2.IGL|Portuguese.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Portuguese.iglang" SelfReg="false"/>
+    <ROW File="Russian.iglang" Component_="Languages" FileName="RUSSIA~1.IGL|Russian.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Russian.iglang" SelfReg="false"/>
+    <ROW File="Slovenian.iglang" Component_="Languages" FileName="SLOVEN~1.IGL|Slovenian.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Slovenian.iglang" SelfReg="false"/>
+    <ROW File="Spanish.iglang" Component_="Languages" FileName="SPANIS~1.IGL|Spanish.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Spanish.iglang" SelfReg="false"/>
+    <ROW File="Ukrainian.iglang" Component_="Languages" FileName="UKRAIN~1.IGL|Ukrainian.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Ukrainian.iglang" SelfReg="false"/>
+    <ROW File="Vietnamese.iglang" Component_="Languages" FileName="VIETNA~1.IGL|Vietnamese.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Vietnamese.iglang" SelfReg="false"/>
     <ROW File="FR.ico" Component_="ExtIcons" FileName="3FR.ico" Attributes="0" SourcePath="..\..\Assets\Ext-Icons\3FR.ico" SelfReg="false"/>
     <ROW File="ARI.ico" Component_="ExtIcons" FileName="ARI.ico" Attributes="0" SourcePath="..\..\Assets\Ext-Icons\ARI.ico" SelfReg="false"/>
     <ROW File="ARW.ico" Component_="ExtIcons" FileName="ARW.ico" Attributes="0" SourcePath="..\..\Assets\Ext-Icons\ARW.ico" SelfReg="false"/>
@@ -112,6 +118,7 @@
     <ROW File="GIF.ico" Component_="ExtIcons" FileName="GIF.ico" Attributes="0" SourcePath="..\..\Assets\Ext-Icons\GIF.ico" SelfReg="false"/>
     <ROW File="GPR.ico" Component_="ExtIcons" FileName="GPR.ico" Attributes="0" SourcePath="..\..\Assets\Ext-Icons\GPR.ico" SelfReg="false"/>
     <ROW File="HDR.ico" Component_="ExtIcons" FileName="HDR.ico" Attributes="0" SourcePath="..\..\Assets\Ext-Icons\HDR.ico" SelfReg="false"/>
+    <ROW File="ICO.ico" Component_="ExtIcons" FileName="ICO.ico" Attributes="0" SourcePath="..\..\Assets\Ext-Icons\ICO.ico" SelfReg="false"/>
     <ROW File="IIQ.ico" Component_="ExtIcons" FileName="IIQ.ico" Attributes="0" SourcePath="..\..\Assets\Ext-Icons\IIQ.ico" SelfReg="false"/>
     <ROW File="JFIF.ico" Component_="ExtIcons" FileName="JFIF.ico" Attributes="0" SourcePath="..\..\Assets\Ext-Icons\JFIF.ico" SelfReg="false"/>
     <ROW File="JPE.ico" Component_="ExtIcons" FileName="JPE.ico" Attributes="0" SourcePath="..\..\Assets\Ext-Icons\JPE.ico" SelfReg="false"/>
@@ -156,6 +163,39 @@
     <ROW File="X3F.ico" Component_="ExtIcons" FileName="X3F.ico" Attributes="0" SourcePath="..\..\Assets\Ext-Icons\X3F.ico" SelfReg="false"/>
     <ROW File="XBM.ico" Component_="ExtIcons" FileName="XBM.ico" Attributes="0" SourcePath="..\..\Assets\Ext-Icons\XBM.ico" SelfReg="false"/>
     <ROW File="XPM.ico" Component_="ExtIcons" FileName="XPM.ico" Attributes="0" SourcePath="..\..\Assets\Ext-Icons\XPM.ico" SelfReg="false"/>
+    <ROW File="LightGray.igtheme" Component_="DefaultTheme" FileName="2017(L~1.IGT|2017 (Light Gray).igtheme" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\2017 (Light Gray).igtheme" SelfReg="false"/>
+    <ROW File="ActualSize.svg" Component_="DefaultTheme" FileName="ACTUAL~1.SVG|ActualSize.svg" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\ActualSize.svg" SelfReg="false"/>
+    <ROW File="AdjustWindowSize.svg" Component_="DefaultTheme" FileName="ADJUST~1.SVG|AdjustWindowSize.svg" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\AdjustWindowSize.svg" SelfReg="false"/>
+    <ROW File="AutoZoom.svg" Component_="DefaultTheme" FileName="AutoZoom.svg" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\AutoZoom.svg" SelfReg="false"/>
+    <ROW File="Checkerboard.svg" Component_="DefaultTheme" FileName="CHECKE~1.SVG|Checkerboard.svg" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\Checkerboard.svg" SelfReg="false"/>
+    <ROW File="config.xml" Component_="DefaultTheme" FileName="config.xml" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\config.xml" SelfReg="false"/>
+    <ROW File="Convert.svg" Component_="DefaultTheme" FileName="Convert.svg" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\Convert.svg" SelfReg="false"/>
+    <ROW File="Delete.svg" Component_="DefaultTheme" FileName="Delete.svg" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\Delete.svg" SelfReg="false"/>
+    <ROW File="Edit.svg" Component_="DefaultTheme" FileName="Edit.svg" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\Edit.svg" SelfReg="false"/>
+    <ROW File="FlipHorz.svg" Component_="DefaultTheme" FileName="FlipHorz.svg" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\FlipHorz.svg" SelfReg="false"/>
+    <ROW File="FlipVert.svg" Component_="DefaultTheme" FileName="FlipVert.svg" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\FlipVert.svg" SelfReg="false"/>
+    <ROW File="FullScreen.svg" Component_="DefaultTheme" FileName="FULLSC~1.SVG|FullScreen.svg" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\FullScreen.svg" SelfReg="false"/>
+    <ROW File="GoToFirst.svg" Component_="DefaultTheme" FileName="GOTOFI~1.SVG|GoToFirst.svg" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\GoToFirst.svg" SelfReg="false"/>
+    <ROW File="GoToImage.svg" Component_="DefaultTheme" FileName="GOTOIM~1.SVG|GoToImage.svg" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\GoToImage.svg" SelfReg="false"/>
+    <ROW File="GotoLast.svg" Component_="DefaultTheme" FileName="GotoLast.svg" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\GotoLast.svg" SelfReg="false"/>
+    <ROW File="LockRatio.svg" Component_="DefaultTheme" FileName="LOCKRA~1.SVG|LockRatio.svg" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\LockRatio.svg" SelfReg="false"/>
+    <ROW File="Menu.svg" Component_="DefaultTheme" FileName="Menu.svg" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\Menu.svg" SelfReg="false"/>
+    <ROW File="OpenFile.svg" Component_="DefaultTheme" FileName="OpenFile.svg" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\OpenFile.svg" SelfReg="false"/>
+    <ROW File="preview.png" Component_="DefaultTheme" FileName="preview.png" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\preview.png" SelfReg="false"/>
+    <ROW File="Print.svg" Component_="DefaultTheme" FileName="Print.svg" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\Print.svg" SelfReg="false"/>
+    <ROW File="Refresh.svg" Component_="DefaultTheme" FileName="Refresh.svg" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\Refresh.svg" SelfReg="false"/>
+    <ROW File="RotateLeft.svg" Component_="DefaultTheme" FileName="ROTATE~1.SVG|RotateLeft.svg" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\RotateLeft.svg" SelfReg="false"/>
+    <ROW File="RotateRight.svg" Component_="DefaultTheme" FileName="ROTATE~2.SVG|RotateRight.svg" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\RotateRight.svg" SelfReg="false"/>
+    <ROW File="ScaleToFill.svg" Component_="DefaultTheme" FileName="SCALET~1.SVG|ScaleToFill.svg" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\ScaleToFill.svg" SelfReg="false"/>
+    <ROW File="ScaleToFit.svg" Component_="DefaultTheme" FileName="SCALET~2.SVG|ScaleToFit.svg" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\ScaleToFit.svg" SelfReg="false"/>
+    <ROW File="ScaleToHeight.svg" Component_="DefaultTheme" FileName="SCALET~3.SVG|ScaleToHeight.svg" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\ScaleToHeight.svg" SelfReg="false"/>
+    <ROW File="ScaleToWidth.svg" Component_="DefaultTheme" FileName="SCALET~4.SVG|ScaleToWidth.svg" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\ScaleToWidth.svg" SelfReg="false"/>
+    <ROW File="Slideshow.svg" Component_="DefaultTheme" FileName="SLIDES~1.SVG|Slideshow.svg" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\Slideshow.svg" SelfReg="false"/>
+    <ROW File="ThumbnailBar.svg" Component_="DefaultTheme" FileName="THUMBN~1.SVG|ThumbnailBar.svg" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\ThumbnailBar.svg" SelfReg="false"/>
+    <ROW File="ViewNextImage.svg" Component_="DefaultTheme" FileName="VIEWNE~1.SVG|ViewNextImage.svg" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\ViewNextImage.svg" SelfReg="false"/>
+    <ROW File="ViewPreviousImage.svg" Component_="DefaultTheme" FileName="VIEWPR~1.SVG|ViewPreviousImage.svg" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\ViewPreviousImage.svg" SelfReg="false"/>
+    <ROW File="ZoomIn.svg" Component_="DefaultTheme" FileName="ZoomIn.svg" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\ZoomIn.svg" SelfReg="false"/>
+    <ROW File="ZoomOut.svg" Component_="DefaultTheme" FileName="ZoomOut.svg" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\ZoomOut.svg" SelfReg="false"/>
     <ROW File="LICENSE.rtf" Component_="default.jpg" FileName="LICENSE.rtf" Attributes="0" SourcePath="..\..\Assets\LICENSE.rtf" SelfReg="false"/>
     <ROW File="igcmd.exe" Component_="igcmd.exe" FileName="igcmd.exe" Attributes="0" SourcePath="..\..\..\Source\ImageGlass\bin\x86\Release\igcmd.exe" SelfReg="false" DigSign="true"/>
     <ROW File="igcmdWin10.exe" Component_="igcmdWin10.exe" FileName="IGCMDW~1.EXE|igcmdWin10.exe" Attributes="0" SourcePath="..\..\..\Source\ImageGlass\bin\x86\Release\igcmdWin10.exe" SelfReg="false" DigSign="true"/>
@@ -171,71 +211,28 @@
     <ROW File="ImageGlass.Services.dll" Component_="ImageGlass.Services.dll" FileName="IMAGEG~6.DLL|ImageGlass.Services.dll" Attributes="0" SourcePath="..\..\..\Source\ImageGlass\bin\x86\Release\ImageGlass.Services.dll" SelfReg="false"/>
     <ROW File="ImageGlass.Settings.dll" Component_="ImageGlass.Settings.dll" FileName="IMAGEG~7.DLL|ImageGlass.Settings.dll" Attributes="0" SourcePath="..\..\..\Source\ImageGlass\bin\x86\Release\ImageGlass.Settings.dll" SelfReg="false"/>
     <ROW File="ImageGlass.UI.dll" Component_="ImageGlass.UI.dll" FileName="IMAGEG~8.DLL|ImageGlass.UI.dll" Attributes="0" SourcePath="..\..\..\Source\ImageGlass\bin\x86\Release\ImageGlass.UI.dll" SelfReg="false"/>
+    <ROW File="Magick.NETQ16AnyCPU.dll" Component_="Magick.NETQ16AnyCPU.dll" FileName="MAGICK~1.DLL|Magick.NET-Q16-AnyCPU.dll" Attributes="0" SourcePath="..\..\..\Source\ImageGlass\bin\x86\Release\Magick.NET-Q16-AnyCPU.dll" SelfReg="false"/>
     <ROW File="System.Runtime.WindowsRuntime.dll" Component_="System.Runtime.WindowsRuntime.dll" FileName="SYSTEM~1.DLL|System.Runtime.WindowsRuntime.dll" Attributes="0" SourcePath="..\..\..\Source\ImageGlass\bin\x86\Release\System.Runtime.WindowsRuntime.dll" SelfReg="false"/>
     <ROW File="igstartup.profile" Component_="default.jpg" FileName="IGSTAR~1.PRO|igstartup.profile" Attributes="0" SourcePath="..\..\..\Source\ImageGlass\bin\x86\Release\igstartup.profile" SelfReg="false"/>
     <ROW File="Windows.winmd" Component_="Windows.winmd" FileName="WINDOW~1.WIN|Windows.winmd" Attributes="0" SourcePath="..\..\..\Source\ImageGlass\bin\x86\Release\Windows.winmd" SelfReg="false"/>
-    <ROW File="LightGray.igtheme" Component_="LightGray.igtheme" FileName="2017(L~1.IGT|2017 (Light Gray).igtheme" Attributes="0" SourcePath="..\..\Assets\Themes\2017 (Light Gray).igtheme" SelfReg="false"/>
-    <ROW File="ActualSize.svg" Component_="ActualSize.svg" FileName="ACTUAL~1.SVG|ActualSize.svg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\ActualSize.svg" SelfReg="false"/>
-    <ROW File="AdjustWindowSize.svg" Component_="ActualSize.svg" FileName="ADJUST~1.SVG|AdjustWindowSize.svg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\AdjustWindowSize.svg" SelfReg="false"/>
-    <ROW File="AutoZoom.svg" Component_="ActualSize.svg" FileName="AutoZoom.svg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\AutoZoom.svg" SelfReg="false"/>
-    <ROW File="Checkerboard.svg" Component_="ActualSize.svg" FileName="CHECKE~1.SVG|Checkerboard.svg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\Checkerboard.svg" SelfReg="false"/>
-    <ROW File="ColorPicker.svg" Component_="ActualSize.svg" FileName="COLORP~1.SVG|ColorPicker.svg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\ColorPicker.svg" SelfReg="false"/>
-    <ROW File="Convert.svg" Component_="ActualSize.svg" FileName="Convert.svg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\Convert.svg" SelfReg="false"/>
-    <ROW File="Crop.svg" Component_="ActualSize.svg" FileName="Crop.svg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\Crop.svg" SelfReg="false"/>
-    <ROW File="Delete.svg" Component_="ActualSize.svg" FileName="Delete.svg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\Delete.svg" SelfReg="false"/>
-    <ROW File="Edit.svg" Component_="ActualSize.svg" FileName="Edit.svg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\Edit.svg" SelfReg="false"/>
-    <ROW File="FlipHorz.svg" Component_="ActualSize.svg" FileName="FlipHorz.svg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\FlipHorz.svg" SelfReg="false"/>
-    <ROW File="FlipVert.svg" Component_="ActualSize.svg" FileName="FlipVert.svg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\FlipVert.svg" SelfReg="false"/>
-    <ROW File="FullScreen.svg" Component_="ActualSize.svg" FileName="FULLSC~1.SVG|FullScreen.svg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\FullScreen.svg" SelfReg="false"/>
-    <ROW File="GoToFirst.svg" Component_="ActualSize.svg" FileName="GOTOFI~1.SVG|GoToFirst.svg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\GoToFirst.svg" SelfReg="false"/>
-    <ROW File="GoToImage.svg" Component_="ActualSize.svg" FileName="GOTOIM~1.SVG|GoToImage.svg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\GoToImage.svg" SelfReg="false"/>
-    <ROW File="GotoLast.svg" Component_="ActualSize.svg" FileName="GotoLast.svg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\GotoLast.svg" SelfReg="false"/>
-    <ROW File="igtheme.xml" Component_="ActualSize.svg" FileName="igtheme.xml" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\igtheme.xml" SelfReg="false"/>
-    <ROW File="LockRatio.svg" Component_="ActualSize.svg" FileName="LOCKRA~1.SVG|LockRatio.svg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\LockRatio.svg" SelfReg="false"/>
-    <ROW File="logo.svg" Component_="ActualSize.svg" FileName="logo.svg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\logo.svg" SelfReg="false"/>
-    <ROW File="Menu.svg" Component_="ActualSize.svg" FileName="Menu.svg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\Menu.svg" SelfReg="false"/>
-    <ROW File="OpenFile.svg" Component_="ActualSize.svg" FileName="OpenFile.svg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\OpenFile.svg" SelfReg="false"/>
-    <ROW File="preview.jpg" Component_="ActualSize.svg" FileName="preview.jpg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\preview.jpg" SelfReg="false"/>
-    <ROW File="Print.svg" Component_="ActualSize.svg" FileName="Print.svg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\Print.svg" SelfReg="false"/>
-    <ROW File="Refresh.svg" Component_="ActualSize.svg" FileName="Refresh.svg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\Refresh.svg" SelfReg="false"/>
-    <ROW File="RotateLeft.svg" Component_="ActualSize.svg" FileName="ROTATE~1.SVG|RotateLeft.svg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\RotateLeft.svg" SelfReg="false"/>
-    <ROW File="RotateRight.svg" Component_="ActualSize.svg" FileName="ROTATE~2.SVG|RotateRight.svg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\RotateRight.svg" SelfReg="false"/>
-    <ROW File="ScaleToFill.svg" Component_="ActualSize.svg" FileName="SCALET~1.SVG|ScaleToFill.svg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\ScaleToFill.svg" SelfReg="false"/>
-    <ROW File="ScaleToFit.svg" Component_="ActualSize.svg" FileName="SCALET~2.SVG|ScaleToFit.svg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\ScaleToFit.svg" SelfReg="false"/>
-    <ROW File="ScaleToHeight.svg" Component_="ActualSize.svg" FileName="SCALET~3.SVG|ScaleToHeight.svg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\ScaleToHeight.svg" SelfReg="false"/>
-    <ROW File="ScaleToWidth.svg" Component_="ActualSize.svg" FileName="SCALET~4.SVG|ScaleToWidth.svg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\ScaleToWidth.svg" SelfReg="false"/>
-    <ROW File="Slideshow.svg" Component_="ActualSize.svg" FileName="SLIDES~1.SVG|Slideshow.svg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\Slideshow.svg" SelfReg="false"/>
-    <ROW File="ThumbnailBar.svg" Component_="ActualSize.svg" FileName="THUMBN~1.SVG|ThumbnailBar.svg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\ThumbnailBar.svg" SelfReg="false"/>
-    <ROW File="ViewNextImage.svg" Component_="ActualSize.svg" FileName="VIEWNE~1.SVG|ViewNextImage.svg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\ViewNextImage.svg" SelfReg="false"/>
-    <ROW File="ViewPreviousImage.svg" Component_="ActualSize.svg" FileName="VIEWPR~1.SVG|ViewPreviousImage.svg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\ViewPreviousImage.svg" SelfReg="false"/>
-    <ROW File="ZoomIn.svg" Component_="ActualSize.svg" FileName="ZoomIn.svg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\ZoomIn.svg" SelfReg="false"/>
-    <ROW File="ZoomOut.svg" Component_="ActualSize.svg" FileName="ZoomOut.svg" Attributes="0" SourcePath="..\..\Assets\Themes\Kobe\ZoomOut.svg" SelfReg="false"/>
-    <ROW File="Magick.NET.Core.dll" Component_="Magick.NET.Core.dll" FileName="MAGICK~2.DLL|Magick.NET.Core.dll" Attributes="0" SourcePath="..\..\..\Source\ImageGlass\bin\x86\Release\Magick.NET.Core.dll" SelfReg="false"/>
-    <ROW File="Magick.NET.SystemDrawing.dll" Component_="Magick.NET.SystemDrawing.dll" FileName="MAGICK~3.DLL|Magick.NET.SystemDrawing.dll" Attributes="0" SourcePath="..\..\..\Source\ImageGlass\bin\x86\Release\Magick.NET.SystemDrawing.dll" SelfReg="false"/>
-    <ROW File="Magick.NETQ8AnyCPU.dll" Component_="Magick.NETQ8AnyCPU.dll" FileName="MAGICK~4.DLL|Magick.NET-Q8-AnyCPU.dll" Attributes="0" SourcePath="..\..\..\Source\ImageGlass\bin\x86\Release\Magick.NET-Q8-AnyCPU.dll" SelfReg="false"/>
-    <ROW File="ChineseSimplified.iglang" Component_="ChineseSimplified.iglang" FileName="CHINES~1.IGL|Chinese Simplified.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Chinese Simplified.iglang" SelfReg="false"/>
-    <ROW File="ChineseTraditional.iglang" Component_="ChineseSimplified.iglang" FileName="CHINES~2.IGL|Chinese Traditional.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Chinese Traditional.iglang" SelfReg="false"/>
-    <ROW File="Finnish.iglang" Component_="ChineseSimplified.iglang" FileName="FINNIS~1.IGL|Finnish.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Finnish.iglang" SelfReg="false"/>
-    <ROW File="German.iglang" Component_="ChineseSimplified.iglang" FileName="GERMAN~1.IGL|German.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\German.iglang" SelfReg="false"/>
-    <ROW File="Italian.iglang" Component_="ChineseSimplified.iglang" FileName="ITALIA~1.IGL|Italian.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Italian.iglang" SelfReg="false"/>
-    <ROW File="Korean.iglang" Component_="ChineseSimplified.iglang" FileName="KOREAN~1.IGL|Korean.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Korean.iglang" SelfReg="false"/>
-    <ROW File="Malay.iglang" Component_="ChineseSimplified.iglang" FileName="MALAY~1.IGL|Malay.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Malay.iglang" SelfReg="false"/>
-    <ROW File="NorwegianBokmal.iglang" Component_="ChineseSimplified.iglang" FileName="NORWEG~1.IGL|Norwegian Bokmal.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Norwegian Bokmal.iglang" SelfReg="false"/>
-    <ROW File="Persian.iglang" Component_="ChineseSimplified.iglang" FileName="PERSIA~1.IGL|Persian.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Persian.iglang" SelfReg="false"/>
-    <ROW File="Polish.iglang" Component_="ChineseSimplified.iglang" FileName="POLISH~1.IGL|Polish.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Polish.iglang" SelfReg="false"/>
-    <ROW File="PortugueseBrazilian.iglang" Component_="ChineseSimplified.iglang" FileName="PORTUG~1.IGL|Portuguese, Brazilian.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Portuguese, Brazilian.iglang" SelfReg="false"/>
-    <ROW File="Portuguese.iglang" Component_="ChineseSimplified.iglang" FileName="PORTUG~2.IGL|Portuguese.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Portuguese.iglang" SelfReg="false"/>
-    <ROW File="Russian.iglang" Component_="ChineseSimplified.iglang" FileName="RUSSIA~1.IGL|Russian.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Russian.iglang" SelfReg="false"/>
-    <ROW File="Slovenian.iglang" Component_="ChineseSimplified.iglang" FileName="SLOVEN~1.IGL|Slovenian.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Slovenian.iglang" SelfReg="false"/>
-    <ROW File="Spanish.iglang" Component_="ChineseSimplified.iglang" FileName="SPANIS~1.IGL|Spanish.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Spanish.iglang" SelfReg="false"/>
-    <ROW File="Ukrainian.iglang" Component_="ChineseSimplified.iglang" FileName="UKRAIN~1.IGL|Ukrainian.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Ukrainian.iglang" SelfReg="false"/>
-    <ROW File="Vietnamese.iglang" Component_="ChineseSimplified.iglang" FileName="VIETNA~1.IGL|Vietnamese.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Vietnamese.iglang" SelfReg="false"/>
+    <ROW File="ColorPicker.svg" Component_="DefaultTheme" FileName="COLORP~1.SVG|ColorPicker.svg" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\ColorPicker.svg" SelfReg="false"/>
+    <ROW File="Crop.svg" Component_="DefaultTheme" FileName="Crop.svg" Attributes="0" SourcePath="..\..\Assets\DefaultTheme\Crop.svg" SelfReg="false"/>
+    <ROW File="ArabicEgypt.iglang" Component_="Languages" FileName="ARABIC~1.IGL|Arabic, Egypt.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Arabic, Egypt.iglang" SelfReg="false"/>
+    <ROW File="ChineseSimplified.iglang" Component_="Languages" FileName="CHINES~2.IGL|Chinese Simplified.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Chinese Simplified.iglang" SelfReg="false"/>
+    <ROW File="Finnish.iglang" Component_="Languages" FileName="FINNIS~1.IGL|Finnish.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Finnish.iglang" SelfReg="false"/>
+    <ROW File="French.iglang" Component_="Languages" FileName="FRENCH~1.IGL|French.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\French.iglang" SelfReg="false"/>
+    <ROW File="German.iglang" Component_="Languages" FileName="GERMAN~1.IGL|German.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\German.iglang" SelfReg="false"/>
+    <ROW File="Indonesian.iglang" Component_="Languages" FileName="INDONE~1.IGL|Indonesian.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Indonesian.iglang" SelfReg="false"/>
+    <ROW File="Italian.iglang" Component_="Languages" FileName="ITALIA~1.IGL|Italian.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Italian.iglang" SelfReg="false"/>
+    <ROW File="Romanian.iglang" Component_="Languages" FileName="ROMANI~1.IGL|Romanian.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Romanian.iglang" SelfReg="false"/>
+    <ROW File="SerbianCyrillic.iglang" Component_="Languages" FileName="SERBIA~1.IGL|Serbian (Cyrillic).iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Serbian (Cyrillic).iglang" SelfReg="false"/>
+    <ROW File="Turkish.iglang" Component_="Languages" FileName="TURKIS~1.IGL|Turkish.iglang" Attributes="0" SourcePath="..\..\Assets\Languages\Turkish.iglang" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
     <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
-    <ROW BuildKey="MsiBuild" BuildName="MsiBuild" BuildOrder="1" BuildType="0" PackageFolder="..\Bin" PackageFileName="ImageGlass_8.1.4.18_x86" Languages="en" InstallationType="4" UseLargeSchema="true"/>
+    <ROW BuildKey="MsiBuild" BuildName="MsiBuild" BuildOrder="1" BuildType="0" PackageFolder="..\Bin" PackageFileName="ImageGlass_7.6.4.30_x86" Languages="en" InstallationType="4" UseLargeSchema="true"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
     <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
@@ -256,17 +253,8 @@
     <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRepairDlg.aip"/>
     <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
   </COMPONENT>
-  <COMPONENT cid="caphyon.advinst.msicomp.MsiActionTextComponent">
-    <ROW Action="AI_XmlCommit" Description="Committing XML file configurations." DescriptionLocId="ActionText.Description.AI_XmlCommit" Template="Committing XML file configurations." TemplateLocId="ActionText.Template.AI_XmlCommit"/>
-    <ROW Action="AI_XmlConfig" Description="Executing XML file configurations" DescriptionLocId="ActionText.Description.AI_XmlConfig" Template="Configuring XML file: &quot;[1]&quot;" TemplateLocId="ActionText.Template.AI_XmlConfig"/>
-    <ROW Action="AI_XmlInstall" Description="Generating actions to configure XML files" DescriptionLocId="ActionText.Description.AI_XmlInstall"/>
-    <ROW Action="AI_XmlRemove" Description="Executing XML file configurations" DescriptionLocId="ActionText.Description.AI_XmlRemove" Template="Configuring XML file: &quot;[1]&quot;" TemplateLocId="ActionText.Template.AI_XmlRemove"/>
-    <ROW Action="AI_XmlRollback" Description="Rolling back XML file configurations." DescriptionLocId="ActionText.Description.AI_XmlRollback" Template="Rolling back XML file configurations." TemplateLocId="ActionText.Template.AI_XmlRollback"/>
-    <ROW Action="AI_XmlUninstall" Description="Generating actions to configure XML files" DescriptionLocId="ActionText.Description.AI_XmlUninstall"/>
-  </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
     <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
-    <ROW Name="xmlCfg.dll" SourcePath="&lt;AI_CUSTACTS&gt;xmlCfg.dll"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiControlComponent">
     <ROW Dialog_="LicenseAgreementDlg" Control="AgreementText" Type="ScrollableText" X="20" Y="60" Width="330" Height="120" Attributes="7" Text="..\..\Assets\LICENSE.rtf" Order="400" TextLocId="Control.Text.LicenseAgreementDlg#AgreementText_2" MsiKey="LicenseAgreementDlg#AgreementText"/>
@@ -300,11 +288,8 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
     <ROW Directory_="APPDIR" Component_="APPDIR" ManualDelete="true"/>
     <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR" ManualDelete="false"/>
-    <ROW Directory_="regid.201006.org.imageglass_Dir" Component_="regid.201006.org.imageglass" ManualDelete="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
-    <ROW Action="AI_DATA_SETTER" Type="51" Source="CustomActionData" Target="[~]"/>
-    <ROW Action="AI_DATA_SETTER_1" Type="51" Source="CustomActionData" Target="[~]"/>
     <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
     <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
     <ROW Action="AI_EnableDebugLog" Type="321" Source="aicustact.dll" Target="EnableDebugLog"/>
@@ -316,12 +301,6 @@
     <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
     <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
     <ROW Action="AI_SetArpReadmeFile" Type="51" Source="ARPREADME" Target="[#LICENSE.rtf]"/>
-    <ROW Action="AI_XmlCommit" Type="11777" Source="xmlCfg.dll" Target="OnXmlCommit" WithoutSeq="true"/>
-    <ROW Action="AI_XmlConfig" Type="11265" Source="xmlCfg.dll" Target="OnXmlConfig" WithoutSeq="true"/>
-    <ROW Action="AI_XmlInstall" Type="1" Source="xmlCfg.dll" Target="OnXmlInstall" AdditionalSeq="AI_DATA_SETTER"/>
-    <ROW Action="AI_XmlRemove" Type="11265" Source="xmlCfg.dll" Target="OnXmlRemove" WithoutSeq="true"/>
-    <ROW Action="AI_XmlRollback" Type="11521" Source="xmlCfg.dll" Target="OnXmlRollback" WithoutSeq="true"/>
-    <ROW Action="AI_XmlUninstall" Type="1" Source="xmlCfg.dll" Target="OnXmlUninstall" AdditionalSeq="AI_DATA_SETTER_1"/>
     <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]" MultiBuildTarget="MsiBuild:[ProgramFilesFolder]\[ProductName]"/>
     <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]" MultiBuildTarget="MsiBuild:[ProgramFilesFolder][ProductName]"/>
     <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
@@ -342,20 +321,16 @@
     <ROW Feature_="MainFeature" Component_="SHORTCUTDIR"/>
     <ROW Feature_="MainFeature" Component_="ImageGlass.ImageListView.dll"/>
     <ROW Feature_="MainFeature" Component_="Registry"/>
+    <ROW Feature_="MainFeature" Component_="DefaultTheme"/>
     <ROW Feature_="MainFeature" Component_="ExtIcons"/>
+    <ROW Feature_="MainFeature" Component_="Languages"/>
     <ROW Feature_="MainFeature" Component_="ImageGlass.Library.dll"/>
     <ROW Feature_="MainFeature" Component_="ImageGlass.Services.dll"/>
     <ROW Feature_="MainFeature" Component_="ImageGlass.Settings.dll"/>
     <ROW Feature_="MainFeature" Component_="ImageGlass.UI.dll"/>
+    <ROW Feature_="MainFeature" Component_="Magick.NETQ16AnyCPU.dll"/>
     <ROW Feature_="MainFeature" Component_="System.Runtime.WindowsRuntime.dll"/>
     <ROW Feature_="MainFeature" Component_="Windows.winmd"/>
-    <ROW Feature_="MainFeature" Component_="LightGray.igtheme"/>
-    <ROW Feature_="MainFeature" Component_="ActualSize.svg"/>
-    <ROW Feature_="MainFeature" Component_="regid.201006.org.imageglass"/>
-    <ROW Feature_="MainFeature" Component_="Magick.NET.Core.dll"/>
-    <ROW Feature_="MainFeature" Component_="Magick.NET.SystemDrawing.dll"/>
-    <ROW Feature_="MainFeature" Component_="Magick.NETQ8AnyCPU.dll"/>
-    <ROW Feature_="MainFeature" Component_="ChineseSimplified.iglang"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
     <ROW Name="ImageGlass_1.exe" SourcePath="..\..\..\Source\ImageGlass\bin\x86\Release\ImageGlass.exe" Index="0"/>
@@ -372,10 +347,6 @@
     <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
     <ROW Action="AI_EnableDebugLog" Sequence="51"/>
     <ROW Action="AI_SetArpReadmeFile" Condition="NOT Installed" Sequence="1001"/>
-    <ROW Action="AI_XmlInstall" Condition="(REMOVE &lt;&gt; &quot;ALL&quot;)" Sequence="5102"/>
-    <ROW Action="AI_DATA_SETTER" Condition="(REMOVE &lt;&gt; &quot;ALL&quot;)" Sequence="5101"/>
-    <ROW Action="AI_XmlUninstall" Condition="(REMOVE)" Sequence="3102"/>
-    <ROW Action="AI_DATA_SETTER_1" Condition="(REMOVE)" Sequence="3101"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
     <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
@@ -405,46 +376,9 @@
     <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="257" ActionProperty="OLDPRODUCTS"/>
     <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
   </COMPONENT>
-  <COMPONENT cid="caphyon.advinst.msicomp.SoftwareIdentificationComponent">
-    <ATTRIBUTE name="LocalFile" value="regid.199509.com.example_ProductNam"/>
-    <ATTRIBUTE name="SystemFile" value="regid.199509.com.example_ProductN_1"/>
-  </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.SynchronizedFolderComponent">
-    <ROW Directory_="Languages_Dir" SourcePath="..\..\Assets\Languages" Feature="MainFeature" ExcludePattern="*~|#*#|%*%|._|CVS|.cvsignore|SCCS|vssver.scc|mssccprj.scc|vssver2.scc|.svn|.DS_Store" ExcludeFlags="6" FileAddOptions="4"/>
-    <ROW Directory_="ExtIcons_Dir" SourcePath="..\..\Assets\Ext-Icons" Feature="MainFeature" ExcludePattern="*~|#*#|%*%|._|CVS|.cvsignore|SCCS|vssver.scc|mssccprj.scc|vssver2.scc|.svn|.DS_Store" ExcludeFlags="6" FileAddOptions="4"/>
-  </COMPONENT>
-  <COMPONENT cid="caphyon.advinst.msicomp.XmlAttributeComponent">
-    <ROW XmlAttribute="xmlnsds" XmlElement="swidsoftware_identification_tag" Name="xmlns:ds" Flags="14" Order="0" Value="http://www.w3.org/2000/09/xmldsig#"/>
-    <ROW XmlAttribute="xmlnsswid" XmlElement="swidsoftware_identification_tag" Name="xmlns:swid" Flags="14" Order="1" Value="http://standards.iso.org/iso/19770/-2/2008/schema.xsd"/>
-    <ROW XmlAttribute="xmlnsxsi" XmlElement="swidsoftware_identification_tag" Name="xmlns:xsi" Flags="14" Order="2" Value="http://www.w3.org/2001/XMLSchema-instance"/>
-    <ROW XmlAttribute="xsischemaLocation" XmlElement="swidsoftware_identification_tag" Name="xsi:schemaLocation" Flags="14" Order="3" Value="http://standards.iso.org/iso/19770/-2/2008/schema.xsd software_identification_tag.xsd"/>
-  </COMPONENT>
-  <COMPONENT cid="caphyon.advinst.msicomp.XmlElementComponent">
-    <ROW XmlElement="swidbuild" ParentElement="swidnumeric" Name="swid:build" Condition="1" Order="2" Flags="14" Text="4" UpdateIndexInParent="0"/>
-    <ROW XmlElement="swidentitlement_required_indicator" ParentElement="swidsoftware_identification_tag" Name="swid:entitlement_required_indicator" Condition="1" Order="0" Flags="14" Text="false" UpdateIndexInParent="0"/>
-    <ROW XmlElement="swidmajor" ParentElement="swidnumeric" Name="swid:major" Condition="1" Order="0" Flags="14" Text="8" UpdateIndexInParent="0"/>
-    <ROW XmlElement="swidminor" ParentElement="swidnumeric" Name="swid:minor" Condition="1" Order="1" Flags="14" Text="1" UpdateIndexInParent="0"/>
-    <ROW XmlElement="swidname" ParentElement="swidproduct_version" Name="swid:name" Condition="1" Order="0" Flags="14" Text="[ProductVersion]" UpdateIndexInParent="0"/>
-    <ROW XmlElement="swidname_1" ParentElement="swidsoftware_creator" Name="swid:name" Condition="1" Order="0" Flags="14" Text="[Manufacturer]" UpdateIndexInParent="0"/>
-    <ROW XmlElement="swidname_2" ParentElement="swidsoftware_licensor" Name="swid:name" Condition="1" Order="0" Flags="14" Text="[Manufacturer]" UpdateIndexInParent="0"/>
-    <ROW XmlElement="swidname_3" ParentElement="swidtag_creator" Name="swid:name" Condition="1" Order="0" Flags="14" Text="[Manufacturer]" UpdateIndexInParent="0"/>
-    <ROW XmlElement="swidnumeric" ParentElement="swidproduct_version" Name="swid:numeric" Condition="1" Order="1" Flags="14" UpdateIndexInParent="0"/>
-    <ROW XmlElement="swidproduct_title" ParentElement="swidsoftware_identification_tag" Name="swid:product_title" Condition="1" Order="1" Flags="14" Text="[ProductName]" UpdateIndexInParent="0"/>
-    <ROW XmlElement="swidproduct_version" ParentElement="swidsoftware_identification_tag" Name="swid:product_version" Condition="1" Order="2" Flags="14" UpdateIndexInParent="0"/>
-    <ROW XmlElement="swidregid" ParentElement="swidsoftware_creator" Name="swid:regid" Condition="1" Order="1" Flags="14" Text="regid.2010-06.org.imageglass" UpdateIndexInParent="0"/>
-    <ROW XmlElement="swidregid_1" ParentElement="swidsoftware_licensor" Name="swid:regid" Condition="1" Order="1" Flags="14" Text="regid.2010-06.org.imageglass" UpdateIndexInParent="0"/>
-    <ROW XmlElement="swidregid_2" ParentElement="swidtag_creator" Name="swid:regid" Condition="1" Order="1" Flags="14" Text="regid.2010-06.org.imageglass" UpdateIndexInParent="0"/>
-    <ROW XmlElement="swidreview" ParentElement="swidnumeric" Name="swid:review" Condition="1" Order="3" Flags="14" Text="18" UpdateIndexInParent="0"/>
-    <ROW XmlElement="swidsoftware_creator" ParentElement="swidsoftware_identification_tag" Name="swid:software_creator" Condition="1" Order="3" Flags="14" UpdateIndexInParent="0"/>
-    <ROW XmlElement="swidsoftware_id" ParentElement="swidsoftware_identification_tag" Name="swid:software_id" Condition="1" Order="5" Flags="14" UpdateIndexInParent="0"/>
-    <ROW XmlElement="swidsoftware_identification_tag" Name="swid:software_identification_tag" Condition="1" Order="0" Flags="14" UpdateIndexInParent="0"/>
-    <ROW XmlElement="swidsoftware_licensor" ParentElement="swidsoftware_identification_tag" Name="swid:software_licensor" Condition="1" Order="4" Flags="14" UpdateIndexInParent="0"/>
-    <ROW XmlElement="swidtag_creator" ParentElement="swidsoftware_identification_tag" Name="swid:tag_creator" Condition="1" Order="6" Flags="14" UpdateIndexInParent="0"/>
-    <ROW XmlElement="swidtag_creator_regid" ParentElement="swidsoftware_id" Name="swid:tag_creator_regid" Condition="1" Order="1" Flags="14" Text="regid.2010-06.org.imageglass" UpdateIndexInParent="0"/>
-    <ROW XmlElement="swidunique_id" ParentElement="swidsoftware_id" Name="swid:unique_id" Condition="1" Order="0" Flags="14" Text="[ProductName]" UpdateIndexInParent="0"/>
-  </COMPONENT>
-  <COMPONENT cid="caphyon.advinst.msicomp.XmlFileComponent">
-    <ROW XmlFile="regid.199509.com.example_ProductN_1" FileName="REGID2~1.SWI|regid.2010-06.org.imageglass_[|ProductName].swidtag" DirProperty="regid.201006.org.imageglass_Dir" Component="igtasks.exe" RootElement="swidsoftware_identification_tag" Flags="153" Version="1.0" Encoding="UTF-8" IndentUnits="2"/>
-    <ROW XmlFile="regid.199509.com.example_ProductNam" FileName="REGID2~1.SWI|regid.2010-06.org.imageglass_[|ProductName].swidtag" DirProperty="APPDIR" Component="igcmd.exe" RootElement="swidsoftware_identification_tag" Flags="153" Version="1.0" Encoding="UTF-8" IndentUnits="2"/>
+    <ROW Directory_="Languages_Dir" SourcePath="..\..\Assets\Languages" Feature="MainFeature" ExcludePattern="*~|#*#|%*%|._|CVS|.cvsignore|SCCS|vssver.scc|mssccprj.scc|vssver2.scc|.svn|.DS_Store" ExcludeFlags="6"/>
+    <ROW Directory_="ExtIcons_Dir" SourcePath="..\..\Assets\Ext-Icons" Feature="MainFeature" ExcludePattern="*~|#*#|%*%|._|CVS|.cvsignore|SCCS|vssver.scc|mssccprj.scc|vssver2.scc|.svn|.DS_Store" ExcludeFlags="6"/>
+    <ROW Directory_="DefaultTheme_Dir" SourcePath="..\..\Assets\DefaultTheme" Feature="MainFeature" ExcludePattern="*~|#*#|%*%|._|CVS|.cvsignore|SCCS|vssver.scc|mssccprj.scc|vssver2.scc|.svn|.DS_Store" ExcludeFlags="6"/>
   </COMPONENT>
 </DOCUMENT>
